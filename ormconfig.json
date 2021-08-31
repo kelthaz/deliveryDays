@@ -1,0 +1,39 @@
+[
+  {
+    "type": "mssql",
+    "host": "pdnhelpharmadb.centralus.cloudapp.azure.com",
+    "port": 1433,
+    "username": "scgouser",
+    "password": "S3h3lph4rm@*",
+    "database": "farmadomicilios",
+    "logging": false,
+    "options": {
+      "encrypt": true
+    },
+    "entities": ["dist/entity/**/*{.js,.ts}"],
+    "migrations": ["dist/migration/**/*{.js,.ts}"],
+    "subscribers": ["dist/subscriber/**/*{.js,.ts}"],
+    "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+    }
+  },
+  {
+    "name": "scgo",
+    "type": "mssql",
+    "host": "pdnhelpharmadb.centralus.cloudapp.azure.com",
+    "port": 1433,
+    "username": "scgouser",
+    "password": "S3h3lph4rm@*",
+    "database": "scgo",
+    "logging": false,
+    "options": {
+      "encrypt": true
+    },
+    "entities": ["dist/entitySCGO/**/*{.js,.ts}"],
+    "cli": {
+      "entitiesDir": "src/entitySCGO"
+    }
+  }
+]
